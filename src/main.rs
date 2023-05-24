@@ -253,7 +253,7 @@ async fn main() {
 				Response::builder().header("Content-Type", "text/xml").body(String::from(response))
 			});
 
-	warp::serve(route).run(([127, 0, 0, 1], 3030)).await;
+	warp::serve(route).run(([0, 0, 0, 0], 3030)).await;
 
 	search_book(
 		String::from(""),
